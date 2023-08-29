@@ -14,6 +14,11 @@ User Authentication - Distinct authentication systems for:
 #### :bust_in_silhouette: Seller
 #### :shield: Admin
 Home Page: An intuitive home page showcasing all available products.
+Dynamic Product Search:
+
+#### :mag_right: Search: Quickly find what you're looking for with a keyword search.
+#### 🔽 Filter: Narrow down product listings based on specific criteria.
+#### :arrow_up_down: Sort: Arrange product listings based on relevance, price, date, and more.
 
 # Seller Capabilities:
 
