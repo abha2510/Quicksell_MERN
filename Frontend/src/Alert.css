@@ -1,0 +1,36 @@
+/* Styles.css or any CSS file you're using */
+.alert {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f44336; /* Red background color */
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+    z-index: 1000; /* To ensure it appears above other content */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    animation: slideUpFade 0.5s forwards;
+}
+
+@keyframes slideUpFade {
+    to {
+        opacity: 1;
+        visibility: visible;
+        bottom: 15%;
+    }
+}
+
+.alert.close {
+    animation: slideDownFade 0.5s forwards;
+}
+
+@keyframes slideDownFade {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        bottom: 10%;
+    }
+}
