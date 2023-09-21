@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import {
   Box, 
@@ -22,6 +22,7 @@ function ProductDetail() {
     const { id } = useParams();
     const imageSize = useBreakpointValue({ base: "100%", sm: "80%", md: "60%", lg: "50%", xl: "60%" });
     const toast = useToast();
+    const navigate=useNavigate()
 
   useEffect(() => {
     async function fetchProductDetail() {
@@ -55,6 +56,7 @@ function ProductDetail() {
         duration: 5000,
         isClosable: true,
       });
+      navigate("/allproducts")
     } catch (error) {
       toast({
         title: "Error placing order",

@@ -23,7 +23,7 @@ function ProductList() {
   // const [selectedProducts, setSelectedProducts] = useState({});
   const navigate = useNavigate();
   const [showAlert, setShowAlert] = useState(false);
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(localStorage.getItem("userType"));
 
   async function fetchProducts() {
     try {
@@ -49,7 +49,7 @@ function ProductList() {
   }, [search, brand, location, sort]);
 
   const handleButtonClick = (id) => {
-    if (user && user.type === "buyer") {
+    if (user==="buyer") {
       navigate(`/product/${id}`);
     } else {
       setShowAlert(true);

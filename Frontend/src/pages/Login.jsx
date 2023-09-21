@@ -41,6 +41,7 @@ function Login() {
       }
       localStorage.setItem("username", JSON.stringify(formData.username));
       navigate("/allproducts")
+      window.location.reload()
     } catch (error) {
       toast({
         title: "Error",

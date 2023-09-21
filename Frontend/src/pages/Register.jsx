@@ -43,6 +43,7 @@ function Signup() {
         });
       }
       navigate("/login");
+      localStorage.setItem("userType", JSON.stringify(userType));
     }catch (error) {
       let errorMessage = "An error occurred.";
       if (error.response && error.response.data) {
